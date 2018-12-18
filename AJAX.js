@@ -63,10 +63,21 @@ $(document).ready(function() {
 				type: 'POST',
 				data: { codigo:          	 $("input[name='codigo']").val(),
 						nombre:           	 $("input[name='nombre']").val(),
-						descripcionProducto: $("input[name='descripcionProducto']").val()
+						descripcionProducto: $("input[name='descripcionProducto']").val(),
+						precio :  			 suma
 						}
 			});
 
+		for (var i = 0; i < claveArr.length; i++) 
+		{
+			$.ajax({
+					url: 'insertarComponentes.php',
+					type: 'POST',
+					data: { clave:            	 claveArr[i],
+							codigo: 	  		 $("input[name='codigo']").val()
+							}
+				});
+		}
 
 		window.location.replace("verProductos.php");
 	});

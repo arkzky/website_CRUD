@@ -40,8 +40,9 @@
 			<li>HTML5</li>
 			<li>CSS</li>
 			<li>JavaScript</li>
+			<li>AJAX con JQuery</li>
 			<li>PHP</li>
-			<li>MySQL</li>
+			<li>SQL</li>
 		</ul>
 		<h4>Autor: Alejandro Gibran Pérez Pérez</h4>
 	</div>
