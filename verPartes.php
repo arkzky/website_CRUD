@@ -56,7 +56,7 @@
 	 </div>
 	 <br>
 	 <div class="logo">
-	 	<button class="btn" id="borrarPiezas">Borrar Piezas</button>
+	 	<button class="btn" id="borrarPiezas">Borrar Partes</button>
 	 </div>
 	 <script src="AJAX.js"></script>
 </body>

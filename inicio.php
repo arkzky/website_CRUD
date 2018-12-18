@@ -33,17 +33,10 @@
 
 	<h1>Bienvenido al Sistema AGPP	</h1>
 
-	<div class="formulario">
+	<div class="camara">
 		<h2>Examen final de la materia de Programación Web</h2>
-		<h3>Tecnologias</h3>
-		<ul>
-			<li>HTML5</li>
-			<li>CSS</li>
-			<li>JavaScript</li>
-			<li>AJAX con JQuery</li>
-			<li>PHP</li>
-			<li>SQL</li>
-		</ul>
+		<img src="img/tecnologias.png" alt="">
+
 		<h4>Autor: Alejandro Gibran Pérez Pérez</h4>
 	</div>
 </body>
