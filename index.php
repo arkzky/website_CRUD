@@ -17,11 +17,11 @@
 	        		<img src="img/AGPP.png" alt="">
 	        		<br><br>
 	        		<br>
-						<input class="entrada" id="usuario" type="text" name="usuario" placeholder="Usuario" autofocus>
+						<input class="entrada" id="usuario" type="text" name="usuario" placeholder="Usuario" required autofocus>
 					<br>
 
 					<br>
-					<input class="entrada" id="contrasenia" type="password" name="contrasenia" placeholder="Contraseña">
+					<input class="entrada" id="contrasenia" type="password" name="contrasenia" placeholder="Contraseña" required>
 
 					<br><br><br>
 	              	<button class="boton" type="submit"><span>Iniciar Sesión </span></button>
@@ -29,8 +29,6 @@
 
 	              	<?php
 	              		session_start();
-	              		if( !empty ( $_POST ) ) 
-	              		{
 							if(isset($_POST["usuario"]) && isset($_POST["contrasenia"]))
 							{
 								if($_POST["usuario"] == "Admin" && $_POST["contrasenia"] == "privado")
@@ -40,19 +38,18 @@
 								}
 								else
 								{
-									if($_POST["usuario"] == "Admin")
+									if($_POST["usuario"] != "Admin")
 									{
 										echo "<p>Usuario incorrecto</p>";
 									}
 
-									if($_POST["Contraseña"] == "privado")
+									if($_POST["contrasenia"] != "privado")
 									{
 										echo "<p>Contraseña incorrecta</p>";
 									}
 
 								}
 		              		}
-						}
 					?>
 
 
