@@ -12,6 +12,7 @@
 	<meta charset="UTF-8">
 	<title>Partes</title>
 	<link rel="stylesheet" href="estilo.css">
+	<script src="jquery-3.3.1.js"></script>
 </head>
 <body>
 <div class="contenedor">
@@ -53,5 +54,10 @@
 			mysqli_close($conexion);
 		?>
 	 </div>
+	 <br>
+	 <div class="logo">
+	 	<button class="btn" id="borrarPiezas">Borrar Piezas</button>
+	 </div>
+	 <script src="AJAX.js"></script>
 </body>
 </html>

@@ -43,30 +43,7 @@
 			
 			<label for="descripcionProducto">Descripcion: </label><br>
 			<input class="entrada" id="descripcion" type="text" name="descripcionProducto" required>
-
-			<br><br>
-			<input class="btn" type="submit" value="Terminar Producto">
-			<br><br>
 		</form>
-			<?php 
-			if(isset($_POST["codigo"]) && isset($_POST["nombre"]) && isset($_POST["descripcionProducto"]))
-			{
-				$servidor = "localhost";
-				$usuario = "alejandro";
-				$passwd = "perez";
-				$db = "alejandro";
-				$conexion = mysqli_connect($servidor, $usuario, $passwd, $db) or die("MYSQL dice: " . mysqli_error($conexion));
-				// echo "Paso 1 y 2. Ok <br>";
-				//Paso 3) Crear la consulta SQL
-				$sql = "INSERT INTO ap_productos (ap_codigo, ap_nombre, ap_descripcion) VALUES ('{$_POST['codigo']}', '{$_POST['nombre']}', '{$_POST['descripcionProducto']}')";
-
-				//Paso 4) Ejecutar la consulta
-				$resultado = mysqli_query($conexion, $sql);
-
-				//Paso 7)
-				mysqli_close($conexion);
-			}
-		?>
 			
 		<form class="columna" id="envio "method="POST" action="">
 				<h2>Agrega las partes del producto</h2>
@@ -89,9 +66,14 @@
 				<br><br>
 		</form>
 		</div>
-		
 		<br><br>
+		
+		<div class="logo">
+			<button class="btn" id="terminar">Terminar Producto</button>
+		</div>
+			
 		<h2>Partes</h2>
+
 		<table class='tabla' id="salida"> 
 			<tr>
 				<th>Clave</th> <th> Descripcion </th> <th> Precio </th>

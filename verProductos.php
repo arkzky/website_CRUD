@@ -12,6 +12,7 @@
 	<meta charset="UTF-8">
 	<title>Productos</title>
 	<link rel="stylesheet" href="estilo.css">
+	<script src="jquery-3.3.1.js"></script>
 </head>
 <body>
 <div class="contenedor">
@@ -61,5 +62,11 @@
 		mysqli_close($conexion);
 	 ?>
 	 </div>
+	 <br><br>
+	 <div class="logo">
+	 	<button class="btn" id="borrarProductos">Borrar Productos</button>
+	 </div>
+	 	
+	 <script src="AJAX.js"></script>
 </body>
 </html>

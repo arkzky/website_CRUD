@@ -7,12 +7,11 @@
 	$db = "alejandro";
 	$conexion = mysqli_connect($servidor, $usuario, $passwd, $db) or die("MYSQL dice: " . mysqli_error($conexion));
 
-	$sql = "INSERT INTO ap_partes (ap_clave, ap_descripcion, ap_precio) 
-			VALUES ('{$_POST['clave']}', '{$_POST['descripcion']}', '{$_POST['precio']}')";
+	$sql = "DELETE FROM ap_productos";
 
 	mysqli_query($conexion, $sql);
 
-	$sql = "SELECT * FROM ap_partes";
+	$sql = "SELECT * FROM ap_productos";
 
 	//Paso 4) Ejecutar la consulta
 	$resultado = mysqli_query($conexion, $sql);
